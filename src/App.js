@@ -11,6 +11,7 @@ import ProductsContextProvider from "./contexts/productContext";
 // import FavoriteContext from "./contexts/favoriteContext";
 
 function App() {
+  console.log("APP");
   return (
     <>
       <ProductsContextProvider>
