@@ -38,7 +38,7 @@ const Routing = () => {
         <Route path="/create-category" element={<CreateCategory />} />
         <Route path="/product-detail/:id" element={<DetailPage />} />
         <Route path="/create-product" element={<CreateProduct />} />
-        <Route path="/products" element={<Tours />} />
+        <Route path="/tours" element={<Tours />} />
         <Route path="/user-products" element={<UserTours />} />
         <Route path="/edit-product/:id" element={<EditTours />} />
         <Route path="/home " element={<Home />} />

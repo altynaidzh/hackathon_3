@@ -1,39 +1,60 @@
-import React, {useEffect} from 'react';
-import { useProducts } from '../../contexts/productContext';
-import TourCard from '../../components/TourCard/TourCard';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 
+import React, { useContext, useEffect } from "react";
+import { productsContext } from "../../contexts/productContext";
+import CustomCard from "../../components/Card";
+import { useSearchParams } from "react-router-dom";
+// import "./style.css";
+import CustomPagination from "../../components/CustomPagination";
+// import { useFavorites } from "../../contexts/favoriteContext";
+// import { toast } from "react-toastify";
 
 const Tours = () => {
-    const {products, getProducts} = useProducts()
+  const { products, getProducts } = useContext(productsContext);
+  //   const { getFavorites, favorites } = useFavorites();
+  const [searchParams] = useSearchParams();
 
-    useEffect(()=> {
-        getProducts()
-    }, []);
+  //   const { addFavoriteToStorage, removeFromFavorites } = useFavorites();
 
-    return (
-        <div>
-        <Navbar bg="dark" data-bs-theme="dark">
-          <Container>
-            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-            <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#features">Features</Nav.Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
-            </Nav>
-          </Container>
-        </Navbar>
-        {products ? (
-          products.map(item => (
-            <TourCard key={item.id} item={item} />
-          ))
-        ) : (
-          <h3>Loading...</h3>
-        )}
-      </div>
+  //   const onFavorite = async (product) => {
+  //     const isFav = favorites.find((fav) => fav.id === product.id);
+  //     if (isFav) {
+  //       await removeFromFavorites(product.id);
+  //       await getFavorites();
+  //       toast.success("removed from fav");
+  //     } else {
+  //       await addFavoriteToStorage(product);
+  //       await getFavorites();
+  //       toast.success("added to fav");
+  //     }
+  //   };
+
+  useEffect(() => {
+    getProducts(
+      searchParams.get("search"),
+      searchParams.get("category"),
+      searchParams.get("_page")
     );
+    // getFavorites();
+  }, [searchParams]);
+
+  return (
+    <div className="tours">
+      <h3>Products</h3>
+      <div className="product-list">
+        {products
+          ? products.map((item) => (
+              <CustomCard
+                product={item}
+                // favorites={favorites}
+                // onFavorite={onFavorite}
+              />
+            ))
+          : "Empty"}
+      </div>
+      <CustomPagination />
+    </div>
+  );
 };
 
 export default Tours;
+
