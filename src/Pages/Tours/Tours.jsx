@@ -1,9 +1,10 @@
 import React, { useContext, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
+
 import { productsContext } from "../../contexts/productContext";
 import CustomCard from "../../components/Card";
-import { useSearchParams } from "react-router-dom";
 // import "./style.css";
-import CustomPagination from "../../components/CustomPagination";
+// import CustomPagination from "../../components/CustomPagination";
 // import { useFavorites } from "../../contexts/favoriteContext";
 // import { toast } from "react-toastify";
 
@@ -37,7 +38,7 @@ const Tours = () => {
   }, [searchParams]);
 
   return (
-    <div className="tours">
+    <div className="products">
       <h3>Products</h3>
       <div className="product-list">
         {products
@@ -50,7 +51,7 @@ const Tours = () => {
             ))
           : "Empty"}
       </div>
-      <CustomPagination />
+      {/* <CustomPagination /> */}
     </div>
   );
 };

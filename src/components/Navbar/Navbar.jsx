@@ -29,7 +29,7 @@ function NavScrollExample() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link>Home</Nav.Link>
+            <Nav.Link onClick={() => navigate("/home")}>Home</Nav.Link>
             <NavDropdown title="Tours" id="navbarScrollingDropdown">
               <NavDropdown.Item onClick={() => navigate("/tours")}>
                 Tours
