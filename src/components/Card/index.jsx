@@ -75,7 +75,7 @@ const CustomCard = ({ product, isUserProducts, onDelete }) => {
           <div style={{ display: "flex", gap: "5px" }}>
             <Button
               onClick={() => navigate(`/product-detail/${product.id}`)}
-              variant="primary"
+              variant="light"
             >
               Details
             </Button>

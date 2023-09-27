@@ -2,9 +2,13 @@ import React, { useContext, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 
 import CustomCard from "../../components/Card";
-import { productsContext } from "../../context/productContext";
-import { useFavorites } from "../../context/favoriteContext";
-// import "./style.css";
+// <<<<<<< Arapbai
+// import { productsContext } from "../../context/productContext";
+// import { useFavorites } from "../../context/favoriteContext";
+// // import "./style.css";
+// =======
+// import "./Tours.css";
+// >>>>>>> master
 // import CustomPagination from "../../components/CustomPagination";
 
 import { toast } from "react-toastify";
@@ -40,7 +44,10 @@ const Tours = () => {
 
   return (
     <div className="products">
-      <h3>Products</h3>
+      <img
+        className="tourImg"
+        src="https://evg-crystal.ru/800/600/http/interier-foto.ru/wp-content/uploads/dlinnye-foto-4.jpg"
+      />
       <div className="product-list">
         {products
           ? products.map((item) => (
