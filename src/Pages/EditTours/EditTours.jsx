@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
-import { productsContext } from "../../contexts/productContext";
+// import { productsContext } from "../../contexts/productContext";
 // import "./style.css";
 import { Button, Form } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
+import { productsContext } from "../../context/productContext";
 // import { toast } from "react-toastify";
 const EditProduct = () => {
   const [title, setTitle] = useState("");

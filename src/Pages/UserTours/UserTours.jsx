@@ -1,10 +1,11 @@
 import React, { useContext, useEffect } from "react";
-import { productsContext } from "../../contexts/productContext";
+// import { productsContext } from "../../contexts/productsContext";
 import CustomCard from "../../components/Card";
+import { useProducts } from "../../context/productContext";
 // import "./style.css";
 
 const UserProducts = () => {
-  const { products, getProducts, deleteProduct } = useContext(productsContext);
+  const { products, getProducts, deleteProduct } = useProducts()
 
   const onDelete = async (id) => {
     await deleteProduct(id);
