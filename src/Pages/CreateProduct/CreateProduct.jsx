@@ -7,7 +7,7 @@ import { productsContext } from "../../contexts/productContext";
 const CreateProduct = () => {
   const { getCategories, categories, createProduct } =
     useContext(productsContext);
-  const [name, setName] = useState("");
+  const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [image, setImage] = useState("");
@@ -19,11 +19,11 @@ const CreateProduct = () => {
 
   const handleSubmit = async () => {
     const product = {
-      name,
-      description,
+      title,
       price,
-      image,
+      description,
       category: selectedCategory,
+      image,
     };
 
     // for (const key in product) {
@@ -34,11 +34,11 @@ const CreateProduct = () => {
 
     await createProduct(product);
     alert("Продукт успешно добавлен");
-    setName("");
-    setDescription("");
+    setTitle("");
     setPrice("");
-    setImage("");
+    setDescription("");
     setSelectedCategory("");
+    setImage("");
   };
 
   return (
@@ -47,15 +47,9 @@ const CreateProduct = () => {
       <Form>
         <Form.Control
           type="text"
-          placeholder="Ввеедите название"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <Form.Control
-          type="text"
-          placeholder="Введите описание"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
+          placeholder="Введите название"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
         />
         <Form.Control
           type="text"
@@ -63,6 +57,13 @@ const CreateProduct = () => {
           value={price}
           onChange={(e) => setPrice(e.target.value)}
         />
+        <Form.Control
+          type="text"
+          placeholder="Введите описание"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        />
+
         <Form.Control
           type="text"
           placeholder="Вставьте ссылку"
@@ -74,12 +75,12 @@ const CreateProduct = () => {
           {categories &&
             categories.map((item) => (
               <option value={item.id} key={item.id}>
-                {item.name}
+                {item.title}
               </option>
             ))}
         </Form.Select>
         <Button onClick={handleSubmit} className="outline-success">
-          Submit
+          Добавить
         </Button>
       </Form>
     </div>
