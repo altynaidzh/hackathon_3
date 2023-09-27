@@ -12,7 +12,7 @@ import Tours from "./Pages/Tours/Tours";
 import UserTours from "./Pages/UserTours/UserTours";
 import EditTours from "./Pages/EditTours/EditTours";
 import DetailPage from "./Pages/DetailPage/DetailPage";
-import Home from "./Home.js/home";
+
 
 const PrivateRoutes = () => {
   const user = localStorage.getItem("email");
@@ -41,7 +41,7 @@ const Routing = () => {
         <Route path="/tours" element={<Tours />} />
         <Route path="/user-products" element={<UserTours />} />
         <Route path="/edit-product/:id" element={<EditTours />} />
-        <Route path="/home " element={<Home />} />
+
       </Route>
     </Routes>
   );
