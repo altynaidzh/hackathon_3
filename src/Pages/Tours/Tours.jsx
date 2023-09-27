@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 
 import { productsContext } from "../../contexts/productContext";
 import CustomCard from "../../components/Card";
-// import "./style.css";
+import "./Tours.css";
 // import CustomPagination from "../../components/CustomPagination";
 // import { useFavorites } from "../../contexts/favoriteContext";
 // import { toast } from "react-toastify";
@@ -39,7 +39,10 @@ const Tours = () => {
 
   return (
     <div className="products">
-      <h3>Products</h3>
+      <img
+        className="tourImg"
+        src="https://evg-crystal.ru/800/600/http/interier-foto.ru/wp-content/uploads/dlinnye-foto-4.jpg"
+      />
       <div className="product-list">
         {products
           ? products.map((item) => (
