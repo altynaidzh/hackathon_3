@@ -4,7 +4,7 @@ import  homephoto  from "../../ph.png"
 const HomePhoto = () => {
     return (
         <div>
-            <image src={homephoto} alt="ss" style={{ height: '200px'}} />
+            <img src={homephoto} alt="ss" style={{ height: '200px'}} />
         </div>
     );
 };

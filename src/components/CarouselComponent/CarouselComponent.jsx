@@ -6,12 +6,12 @@ const carouselContainerStyle = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  height: "100vh",
+  height: "80vh",
 };
 
 const carouselStyle = {
-  marginTop: "40px",
-  width: "1300px",
+  marginTop: "10px",
+  width: "1500px",
 };
 
 const CarouselComponent = () => {
@@ -21,7 +21,7 @@ const CarouselComponent = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://res.cloudinary.com/blume2000/image/upload/c_fill,dpr_1,f_webp,fl_progressive:steep,q_auto:eco,g_auto,w_1360,h_638/v1688645597/cms/Balkon.webp"
+            src="https://avatars.mds.yandex.net/i?id=83a1dfd5f8df1565c13b76b97e72b2a2-5169729-images-thumbs&n=13"
             alt="First slide"
           />
           <Carousel.Caption>
