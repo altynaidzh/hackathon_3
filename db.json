@@ -1,30 +1,37 @@
 {
   "products": [
     {
-      "id": 1,
-      "title": "Тур в Дубай",
-      "price": 47300,
-      "description": "Дубай – это идеальное место для отдыха с детьми и рай для взрослых: новейшие парки аттракционов, аквапарки, рестораны любой кухни мира, яхты и гольф клубы, дайвинг-центры, верблюжьи скачки, сафари по пустыне, конные прогулки и многое другое.",
-      "category": "Туры за рубеж",
-      "image": "https://concept.kg/media/redactor/pexels-photo-325193.jpeg"
+      "title": "Турецкая Ривьера",
+      "price": "от 8000 сомов",
+      "description": "Дней: 8 / Ночей: 9",
+      "category": "1",
+      "image": "https://assets.gq.ru/photos/5f5a5736b2ce247b97f29f1a/16:9/w_2560%2Cc_limit/GettyImages-507551802.jpg",
+      "id": 1
     },
     {
-
-      "id": 2,
-      "title": "pppp",
-      "price": 47300,
-      "description": "Дубай – это идеальное место для отдыха с детьми и рай для взрослых: новейшие парки аттракционов, аквапарки, рестораны любой кухни мира, яхты и гольф клубы, дайвинг-центры, верблюжьи скачки, сафари по пустыне, конные прогулки и многое другое.",
-      "category": "Туры за рубеж",
-      "image": "https://concept.kg/media/redactor/pexels-photo-325193.jpeg"
+      "title": "Баку в Итальянском ",
+      "price": "Маршрут: Стамбул - Чанаккале - Троя ",
+      "description": "Дней: 8 / Ночей: 7",
+      "category": "1",
+      "image": "https://www.smartertravel.com/wp-content/uploads/2017/06/shutterstock_544217959.jpg",
+      "id": 2
+    },
+    {
+      "title": "Баку в Итальянском ",
+      "price": "Маршрут: Стамбул - Чанаккале - Троя ",
+      "description": "Дней: 8 / Ночей: 7",
+      "category": "1",
+      "image": "https://www.smartertravel.com/wp-content/uploads/2017/06/shutterstock_544217959.jpg",
+      "id": 2
     }
   ],
   "categories": [
     {
-      "name": "Overseas tours",
+      "title": "Туры за рубеж",
       "id": 1
     },
     {
-      "name": "Internal tours",
+      "title": "Внутренние туры",
       "id": 2
     }
   ],

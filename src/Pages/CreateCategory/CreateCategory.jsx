@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
-import { productsContext } from "../../contexts/productContext";
 // import "./style.css";
 import { Button, Modal } from "react-bootstrap";
+import { productsContext } from "../../context/productContext";
 
 const CreateCategory = () => {
   const [categoryName, setCategoryName] = useState("");

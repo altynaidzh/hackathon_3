@@ -14,12 +14,12 @@ const CustomCard = ({ product, isUserProducts, onDelete }) => {
       <div className="info">
         <div>
           <h3>{product.title}</h3>
-          <p>Category: {product.category}</p>
-          <p>Price: ${product.price}</p>
+          <p>{product.description}</p>
+          <p>Цена ${product.price}</p>
           <div style={{ display: "flex", gap: "5px" }}>
             <Button
               onClick={() => navigate(`/product-detail/${product.id}`)}
-              variant="primary"
+              variant="light"
             >
               Details
             </Button>

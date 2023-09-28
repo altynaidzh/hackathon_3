@@ -103,7 +103,7 @@ const ProductsContextProvider = ({ children }) => {
   const getProducts = async (search, category, _page) => {
     try {
       const res = await axios(`${API}/products?_limit=${LIMIT}`, {
-        // _page=2&
+
         params: {
           q: search,
           ...(category ? { category } : null),
