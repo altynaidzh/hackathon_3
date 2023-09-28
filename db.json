@@ -1,29 +1,30 @@
 {
   "products": [
     {
-      "id": 1,
-      "title": "Тур в Дубай",
-      "price": 47300,
-      "description": "Дубай – это идеальное место для отдыха с детьми и рай для взрослых: новейшие парки аттракционов, аквапарки, рестораны любой кухни мира, яхты и гольф клубы, дайвинг-центры, верблюжьи скачки, сафари по пустыне, конные прогулки и многое другое.",
-      "category": "Overseas tours",
-      "image": "https://concept.kg/media/redactor/pexels-photo-325193.jpeg"
+      "title": "дэжыю",
+      "price": "ошфльсджцвlmk.;/,;'>\"",
+      "description": "лщфцсжыув",
+      "category": "1",
+      "image": "https://concept.kg/media/redactor/pexels-photo-325193.jpeg",
+      "id": 3
     },
     {
-      "id": 2,
-      "title": "pppp",
-      "price": 47300,
-      "description": "Дубай – это идеальное место для отдыха с детьми и рай для взрослых: новейшие парки аттракционов, аквапарки, рестораны любой кухни мира, яхты и гольф клубы, дайвинг-центры, верблюжьи скачки, сафари по пустыне, конные прогулки и многое другое.",
-      "category": "Internal tours",
-      "image": "https://concept.kg/media/redactor/pexels-photo-325193.jpeg"
+      "title": "отщдФвс",
+      "price": "ШГФИЦРСЫВД",
+      "description": "ГЦФИЫШСЛТВД",
+      "category": "1",
+      "image": "https://concept.kg/media/redactor/pexels-photo-325193.jpeg",
+      "id": 4
     }
   ],
   "categories": [
     {
-      "title": "Overseas tours",
+      "title": "Туры за рубеж",
       "id": 1
     },
     {
       "title": "Internal tours",
+      "title": "Внутренние туры",
       "id": 2
     }
   ],
