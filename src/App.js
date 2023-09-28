@@ -7,6 +7,7 @@ import Routing from "./Routing";
 // import ProductsContextProvider from "./contexts/productContext";
 import AuthContextProvider from "./context/authContext";
 import ProductsContextProvider from "./context/productContext";
+import FavoriteContext from "./context/favoriteContext";
 
 // import { ToastContainer } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
@@ -20,12 +21,12 @@ function App() {
       <ProductsContextProvider>
         {/* <ToastContainer /> */}
         <AuthContextProvider>
-          {/* <FavoriteContext> */}
+          <FavoriteContext>
 
           <Navbar />
           <Routing />
 
-          {/* </FavoriteContext> */}
+          </FavoriteContext>
         </AuthContextProvider>
       </ProductsContextProvider>
     </>

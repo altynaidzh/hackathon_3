@@ -1,33 +1,33 @@
 import React, { useContext, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 
-// import { productsContext } from "../../contexts/productContext";
 import CustomCard from "../../components/Card";
 import { productsContext } from "../../context/productContext";
+import { useFavorites } from "../../context/favoriteContext";
 // import "./style.css";
 // import CustomPagination from "../../components/CustomPagination";
-// import { useFavorites } from "../../contexts/favoriteContext";
-// import { toast } from "react-toastify";
+
+import { toast } from "react-toastify";
 
 const Tours = () => {
   const { products, getProducts } = useContext(productsContext);
-  //   const { getFavorites, favorites } = useFavorites();
+    const { getFavorites, favorites } = useFavorites();
   const [searchParams] = useSearchParams();
 
-  //   const { addFavoriteToStorage, removeFromFavorites } = useFavorites();
+    const { addFavoriteToStorage, removeFromFavorites } = useFavorites();
 
-  //   const onFavorite = async (product) => {
-  //     const isFav = favorites.find((fav) => fav.id === product.id);
-  //     if (isFav) {
-  //       await removeFromFavorites(product.id);
-  //       await getFavorites();
-  //       toast.success("removed from fav");
-  //     } else {
-  //       await addFavoriteToStorage(product);
-  //       await getFavorites();
-  //       toast.success("added to fav");
-  //     }
-  //   };
+    const onFavorite = async (product) => {
+      const isFav = favorites.find((fav) => fav.id === product.id);
+      if (isFav) {
+        await removeFromFavorites(product.id);
+        await getFavorites();
+        toast.success("removed from fav");
+      } else {
+        await addFavoriteToStorage(product);
+        await getFavorites();
+        toast.success("added to fav");
+      }
+    };
 
   useEffect(() => {
     getProducts(
@@ -35,7 +35,7 @@ const Tours = () => {
       searchParams.get("category"),
       searchParams.get("_page")
     );
-    // getFavorites();
+    getFavorites();
   }, [searchParams]);
 
   return (
