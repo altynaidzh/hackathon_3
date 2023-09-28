@@ -3,8 +3,10 @@ import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import Routing from "./Routing";
 
-import AuthContextProvider from "./contexts/authContext";
-import ProductsContextProvider from "./contexts/productContext";
+
+// import ProductsContextProvider from "./contexts/productContext";
+import AuthContextProvider from "./context/authContext";
+import ProductsContextProvider from "./context/productContext";
 
 // import { ToastContainer } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
@@ -14,6 +16,7 @@ function App() {
   console.log("APP");
   return (
     <>
+    
       <ProductsContextProvider>
         {/* <ToastContainer /> */}
         <AuthContextProvider>

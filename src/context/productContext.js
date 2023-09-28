@@ -1,4 +1,4 @@
-;import axios from "axios";
+import axios from "axios";
 import React, { useContext, useReducer } from "react";
 
 export const productsContext = React.createContext();
@@ -103,7 +103,7 @@ const ProductsContextProvider = ({ children }) => {
   const getProducts = async (search, category, _page) => {
     try {
       const res = await axios(`${API}/products?_limit=${LIMIT}`, {
-        // _page=2&
+
         params: {
           q: search,
           ...(category ? { category } : null),

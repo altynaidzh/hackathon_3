@@ -5,7 +5,7 @@
       "title": "Тур в Дубай",
       "price": 47300,
       "description": "Дубай – это идеальное место для отдыха с детьми и рай для взрослых: новейшие парки аттракционов, аквапарки, рестораны любой кухни мира, яхты и гольф клубы, дайвинг-центры, верблюжьи скачки, сафари по пустыне, конные прогулки и многое другое.",
-      "category": "Туры за рубеж",
+      "category": "Overseas tours",
       "image": "https://concept.kg/media/redactor/pexels-photo-325193.jpeg"
     },
     {
@@ -13,17 +13,17 @@
       "title": "pppp",
       "price": 47300,
       "description": "Дубай – это идеальное место для отдыха с детьми и рай для взрослых: новейшие парки аттракционов, аквапарки, рестораны любой кухни мира, яхты и гольф клубы, дайвинг-центры, верблюжьи скачки, сафари по пустыне, конные прогулки и многое другое.",
-      "category": "Туры за рубеж",
+      "category": "Internal tours",
       "image": "https://concept.kg/media/redactor/pexels-photo-325193.jpeg"
     }
   ],
   "categories": [
     {
-      "name": "Overseas tours",
+      "title": "Overseas tours",
       "id": 1
     },
     {
-      "name": "Internal tours",
+      "title": "Internal tours",
       "id": 2
     }
   ],

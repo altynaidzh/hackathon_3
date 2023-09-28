@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 // import "./style.css";
 import { Button, Form } from "react-bootstrap";
-import { productsContext } from "../../contexts/productContext";
+import { productsContext } from "../../context/productContext";
+// import { productsContext } from "../../contexts/productContext";
 // import { toast } from "react-toastify";
 
 const CreateProduct = () => {

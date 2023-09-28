@@ -1,8 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 
-import { productsContext } from "../../contexts/productContext";
+// import { productsContext } from "../../contexts/productContext";
 import CustomCard from "../../components/Card";
+import { productsContext } from "../../context/productContext";
 // import "./style.css";
 // import CustomPagination from "../../components/CustomPagination";
 // import { useFavorites } from "../../contexts/favoriteContext";
