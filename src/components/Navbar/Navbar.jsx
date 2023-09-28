@@ -6,8 +6,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../../context/authContext";
 import SearchComponent from "../SearchComponents/SearchComponent";
-// import { authContext } from "../../contexts/authContext";
-// import SearchComponent from "../SearchComponent";
 
 function NavScrollExample() {
   const [currentUser, setCurrentUser] = useState("");

@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 // import "./style.css";
 import { Button, Form } from "react-bootstrap";
 import { productsContext } from "../../context/productContext";
-// import { productsContext } from "../../contexts/productContext";
-// import { toast } from "react-toastify";
+
+import { toast } from "react-toastify";
 
 const CreateProduct = () => {
   const { getCategories, categories, createProduct } =
@@ -27,11 +27,11 @@ const CreateProduct = () => {
       image,
     };
 
-    // for (const key in product) {
-    //   if (!product[key].trim()) {
-    //     return alert("Заполните все поля");
-    //   }
-    // }
+    for (const key in product) {
+      if (!product[key].trim()) {
+        return alert("Заполните все поля");
+      }
+    }
 
     await createProduct(product);
     alert("Продукт успешно добавлен");

@@ -47,7 +47,7 @@ const SearchComponent = () => {
         }}
         value={selectedCategory}
       >
-        <option value=''>Choose category...</option>
+        <option value=''> Выбрать категории...</option>
         {categories && categories.map(item => (
           <option value={item.title}>{item.title}</option>
         ))}
