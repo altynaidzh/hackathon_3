@@ -3,32 +3,33 @@ import { useSearchParams } from "react-router-dom";
 
 import CustomCard from "../../components/Card";
 // <<<<<<< Arapbai
-// import { productsContext } from "../../context/productContext";
+import { productsContext } from "../../context/productContext";
 // import { useFavorites } from "../../context/favoriteContext";
-// // import "./style.css";
+// import "./style.css";
 // =======
 // import "./Tours.css";
 // >>>>>>> master
-// import CustomPagination from "../../components/CustomPagination";
+import CustomPagination from "../../components/CustomPagination";
 
 import { toast } from "react-toastify";
+import { useFavorites } from "../../context/favoriteContext";
 
 const Tours = () => {
   const { products, getProducts } = useContext(productsContext);
-    const { getFavorites, favorites } = useFavorites();
+    // const { getFavorites, favorites } = useFavorites();
   const [searchParams] = useSearchParams();
 
-    const { addFavoriteToStorage, removeFromFavorites } = useFavorites();
+    // const { addFavoriteToStorage, removeFromFavorites } = useFavorites();
 
     const onFavorite = async (product) => {
-      const isFav = favorites.find((fav) => fav.id === product.id);
+      const isFav = useFavorites.find((fav) => fav.id === product.id);
       if (isFav) {
-        await removeFromFavorites(product.id);
-        await getFavorites();
+        // await removeFromFavorites(product.id);
+        // await getFavorites();
         toast.success("removed from fav");
       } else {
-        await addFavoriteToStorage(product);
-        await getFavorites();
+        // await addFavoriteToStorage(product);
+        // await getFavorites();
         toast.success("added to fav");
       }
     };
@@ -39,7 +40,7 @@ const Tours = () => {
       searchParams.get("category"),
       searchParams.get("_page")
     );
-    getFavorites();
+    // getFavorites();
   }, [searchParams]);
 
   return (
@@ -59,7 +60,7 @@ const Tours = () => {
             ))
           : "Empty"}
       </div>
-      {/* <CustomPagination /> */}
+      <CustomPagination />
     </div>
   );
 };

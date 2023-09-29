@@ -71,7 +71,7 @@ const CustomCard = ({ product, isUserProducts, onDelete }) => {
         <div>
           <h3>{product.title}</h3>
           <p>{product.description}</p>
-          <p>Цена ${product.price}</p>
+          <p>Цена:{product.price}</p>
           <div style={{ display: "flex", gap: "5px" }}>
             <Button
               onClick={() => navigate(`/product-detail/${product.id}`)}
