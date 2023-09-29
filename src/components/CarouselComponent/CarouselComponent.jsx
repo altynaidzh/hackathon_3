@@ -11,7 +11,14 @@ const carouselContainerStyle = {
 
 const carouselStyle = {
   marginTop: "40px",
-  width: "1300px",
+  maxWidth: "1300px",
+  width: "100%",
+  margin: "0 auto", // Центрируем карусель на странице
+};
+
+const imageStyle = {
+  width: "100%", // Сделайте изображения адаптивными по ширине
+  height: "auto", // Автоматическое масштабирование высоты
 };
 
 const CarouselComponent = () => {
@@ -21,8 +28,9 @@ const CarouselComponent = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://res.cloudinary.com/blume2000/image/upload/c_fill,dpr_1,f_webp,fl_progressive:steep,q_auto:eco,g_auto,w_1360,h_638/v1688645597/cms/Balkon.webp"
-            alt="First slide"
+            src="https://s9.travelask.ru/uploads/post/000/027/649/main_image/full-56024e81c255ba1de46e46127c355825.jpg"
+            alt="Первый слайд"
+            style={imageStyle}
           />
           <Carousel.Caption>
             <h5>Растения для балкона и сада</h5>
@@ -32,8 +40,9 @@ const CarouselComponent = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://res.cloudinary.com/blume2000/image/upload/c_fill,dpr_1,f_webp,fl_progressive:steep,q_auto:eco,g_auto,w_1360,h_638/v1686587063/cms/Sommer_23_2.webp"
-            alt="Second slide"
+            src="https://top10.travel/wp-content/uploads/2016/10/santa-mariya-della-salyute.jpg"
+            alt="Второй слайд"
+            style={imageStyle}
           />
           <Carousel.Caption>
             <h5>Почувствуй летний вайб</h5>
@@ -43,8 +52,9 @@ const CarouselComponent = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://res.cloudinary.com/blume2000/image/upload/c_fill,dpr_1,f_webp,fl_progressive:steep,q_auto:eco,g_auto,w_1360,h_638/v1687768071/cms/Sonnenblumen_3.webp"
-            alt="Third slide"
+            src="https://lifeglobe.net/x/entry/0/different5-67.jpg"
+            alt="Третий слайд"
+            style={imageStyle}
           />
           <Carousel.Caption>
             <h5>Закажите солнце в дом</h5>
