@@ -7,6 +7,8 @@ const carouselContainerStyle = {
   justifyContent: "center",
   alignItems: "center",
   height: "80vh",
+  marginTop: "80px",
+  marginBottom: "60px",
 };
 
 const carouselStyle = {

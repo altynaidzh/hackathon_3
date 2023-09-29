@@ -1,41 +1,32 @@
 import React from "react";
-import "../Footer/Footer.css";
+import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div class="footer">
-      <div class="container footer-block">
-        <div class="footer-block_left">
-          <ul class="footer__list">
-            <h4>Contacts</h4>
-            <li class="footer__item">
-              <img src="./images/whatsapp.png" alt="" class="beforeimg" />
-              +996999550088
-            </li>
-            <li class="footer__item">
-              <a
-                href="https://www.instagram.com/sheishenbekovv_/"
-                class="footer__item__link"
+    <section className="mainFooter">
+      <footer className="text-center text-white">
+        <div className="container p-4 pb-0">
+          <section className="">
+            <p className="d-flex justify-content-center align-items-center">
+              <span className="me-3">Свяжитесь со мной</span>
+              <button
+                type="button"
+                className="btn btn-outline-light btn-rounded"
               >
-                <img src="./images/instagram.png" alt="" class="beforeimg" />
-                instagram
-              </a>
-            </li>
-          </ul>
-          <h6 class="footer__title">Made by Makers students</h6>
+                Звонок
+              </button>
+            </p>
+          </section>
         </div>
-        <div class="footer-block_right">
-          <ul>
-            <h4>sources</h4>
-            <li class="footer__item footer__item_right">
-              <a href="https://concept.kg/" class="footer__item__link">
-                Idea
-              </a>
-            </li>
-          </ul>
+
+        <div className="text-center p-3">
+          © 2023 Copyright:
+          <a className="text-white" href="https://mdbootstrap.com/">
+            MDBootstrap.com
+          </a>
         </div>
-      </div>
-    </div>
+      </footer>
+    </section>
   );
 };
 
