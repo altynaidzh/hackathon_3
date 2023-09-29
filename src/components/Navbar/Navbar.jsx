@@ -6,8 +6,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../../context/authContext";
 import SearchComponent from "../SearchComponents/SearchComponent";
-// import { authContext } from "../../contexts/authContext";
-// import SearchComponent from "../SearchComponent";
 
 function NavScrollExample() {
   const [currentUser, setCurrentUser] = useState("");
@@ -32,15 +30,15 @@ function NavScrollExample() {
             navbarScroll
           >
             <Nav.Link onClick={() => navigate("/home")}>Home</Nav.Link>
-            <NavDropdown title="Tours" id="navbarScrollingDropdown">
+            <NavDropdown title="Туры" id="navbarScrollingDropdown">
               <NavDropdown.Item onClick={() => navigate("/tours")}>
-                Tours
+                Туры
               </NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Admin" id="navbarScrollingDropdown">
+            <NavDropdown title="Админ" id="navbarScrollingDropdown">
               {isAdmin && (
                 <NavDropdown.Item onClick={() => navigate("/user-products")}>
-                  Update
+                  Редактировать
                 </NavDropdown.Item>
               )}
               {isAdmin && (
@@ -50,24 +48,24 @@ function NavScrollExample() {
               )}
               {isAdmin && (
                 <NavDropdown.Item onClick={() => navigate("/create-category")}>
-                  Create Category
+                  Создать категорию
                 </NavDropdown.Item>
               )}
             </NavDropdown>
 
-            <NavDropdown title="User" id="navbarScrollingDropdown">
+            <NavDropdown title="Пользователь" id="navbarScrollingDropdown">
               {!currentUser ? (
                 <>
                   <NavDropdown.Item onClick={() => navigate("/login")}>
-                    Login
+                    Войти
                   </NavDropdown.Item>
                   <NavDropdown.Item onClick={() => navigate("/signup")}>
-                    Sign Up
+                    Зарегистрироваться
                   </NavDropdown.Item>
                 </>
               ) : (
                 <NavDropdown.Item onClick={() => handleLogout(navigate)}>
-                  Log Out
+                  Выйти
                 </NavDropdown.Item>
               )}
             </NavDropdown>

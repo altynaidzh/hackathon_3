@@ -2,12 +2,14 @@
   width: 100%;
   height: 250px;
   margin-top: 40px;
-  /* position: relative; */
+  display: flex;
+  align-self: center;
+  position: relative;
 }
 
 .tourImg::after {
   content: "Открывай мир с нами!";
-  /* position: absolute; */
+  position: absolute;
   top: 10px;
   left: 10px;
   background-color: rgba(255, 255, 255, 0.7);

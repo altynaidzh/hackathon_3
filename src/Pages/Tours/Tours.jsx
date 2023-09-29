@@ -2,19 +2,18 @@ import React, { useContext, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 
 import CustomCard from "../../components/Card";
-// <<<<<<< Arapbai
-// import { productsContext } from "../../context/productContext";
-// import { useFavorites } from "../../context/favoriteContext";
-// // import "./style.css";
-// =======
-// import "./Tours.css";
-// >>>>>>> master
-// import CustomPagination from "../../components/CustomPagination";
+import { productsContext } from "../../context/productContext";
+// // import { useFavorites } from "../../context/favoriteContext";
+// import "./style.css";
+
+import "./Tours.css";
+
+import CustomPagination from "../../components/CustomPagination";
 
 // import { toast } from "react-toastify";
 
 const Tours = () => {
-  // const { products, getProducts } = useContext(productsContext);
+  const { products, getProducts } = useContext(productsContext);
   // const { getFavorites, favorites } = useFavorites();
   const [searchParams] = useSearchParams();
 
@@ -59,7 +58,7 @@ const Tours = () => {
             ))
           : "Empty"}
       </div>
-      {/* <CustomPagination /> */}
+      <CustomPagination />
     </div>
   );
 };

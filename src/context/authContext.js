@@ -15,7 +15,7 @@ const AuthContextProvider = ({ children }) => {
       await axios.post(`${API}/account/register/`, user);
       navigate("/login");
     } catch (error) {
-      setError(error.response.data);
+      setError(error.response);
     } finally {
       setLoading(false);
     }
@@ -29,7 +29,7 @@ const AuthContextProvider = ({ children }) => {
       localStorage.setItem("email", user.email);
       navigate("/");
     } catch (error) {
-      setError(error.response.data);
+      setError(error.response);
     } finally {
       setLoading(false);
     }
