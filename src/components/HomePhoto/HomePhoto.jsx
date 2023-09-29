@@ -1,10 +1,11 @@
 import React from 'react';
 import  homephoto  from "../../ph.png"
+import "../HomePhoto/HomePhoto.css"
 
 const HomePhoto = () => {
     return (
-        <div>
-            <img src={homephoto} alt="ss" style={{ height: '200px'}} />
+        <div className='phot'>
+            <img src={homephoto} alt="ss" />
         </div>
     );
 };

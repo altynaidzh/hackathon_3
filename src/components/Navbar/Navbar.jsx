@@ -6,8 +6,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../../context/authContext";
 import SearchComponent from "../SearchComponents/SearchComponent";
-// import { authContext } from "../../contexts/authContext";
-// import SearchComponent from "../SearchComponent";
 
 function NavScrollExample() {
   const [currentUser, setCurrentUser] = useState("");
@@ -37,6 +35,7 @@ function NavScrollExample() {
                 Tours
               </NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link onClick={() => navigate("/cart")}>Cart</Nav.Link>
             <NavDropdown title="Admin" id="navbarScrollingDropdown">
               {isAdmin && (
                 <NavDropdown.Item onClick={() => navigate("/user-products")}>

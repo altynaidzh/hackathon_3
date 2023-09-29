@@ -2,8 +2,8 @@ import React, { useContext, useEffect } from "react";
 import { useState } from "react";
 import { Pagination } from "react-bootstrap";
 import { useSearchParams } from "react-router-dom";
-import { productsContext } from "../../contexts/productContext";
 import { getPageCount } from "./helper";
+import { productsContext } from "../../context/productContext";
 
 const CustomPagination = () => {
   const { pages } = useContext(productsContext);

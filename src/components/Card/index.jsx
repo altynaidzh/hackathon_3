@@ -3,10 +3,12 @@ import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./cardstyles.css";
+import { useCart } from "../../context/cartContext";
 
 
 const CustomCard = ({ product, isUserProducts, onDelete }) => {
   const navigate = useNavigate();
+  const { addProductToCart, checkProductInCart } = useCart();
 
   return (
     <Card className="custom-card">
@@ -15,13 +17,21 @@ const CustomCard = ({ product, isUserProducts, onDelete }) => {
         <div>
           <h3>{product.title}</h3>
           <p>{product.description}</p>
-          <p>Цена ${product.price}</p>
+          <p>Цена:{product.price}</p>
           <div style={{ display: "flex", gap: "5px" }}>
             <Button
               onClick={() => navigate(`/product-detail/${product.id}`)}
               variant="light"
             >
               Details
+            </Button>
+            <Button
+              onClick={() => addProductToCart(product)}
+              variant="light"
+            >
+              {`${
+            checkProductInCart(product.id) ? "Delete from cart" : "Add to cart"
+          }`}
             </Button>
             {isUserProducts && (
               <>

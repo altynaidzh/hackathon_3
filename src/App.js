@@ -8,6 +8,7 @@ import Routing from "./Routing";
 import AuthContextProvider from "./context/authContext";
 import ProductsContextProvider from "./context/productContext";
 import FavoriteContext from "./context/favoriteContext";
+import CartContextProvider from "./context/cartContext";
 
 // import { ToastContainer } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
@@ -17,7 +18,7 @@ function App() {
   console.log("APP");
   return (
     <>
-    
+    <CartContextProvider>
       <ProductsContextProvider>
         {/* <ToastContainer /> */}
         <AuthContextProvider>
@@ -29,6 +30,7 @@ function App() {
           </FavoriteContext>
         </AuthContextProvider>
       </ProductsContextProvider>
+      </CartContextProvider>
     </>
   );
 }
