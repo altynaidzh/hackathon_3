@@ -30,16 +30,16 @@ function NavScrollExample() {
             navbarScroll
           >
             <Nav.Link onClick={() => navigate("/home")}>Home</Nav.Link>
-            <NavDropdown title="Tours" id="navbarScrollingDropdown">
+            <NavDropdown title="Туры" id="navbarScrollingDropdown">
               <NavDropdown.Item onClick={() => navigate("/tours")}>
-                Tours
+                Туры
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link onClick={() => navigate("/cart")}>Cart</Nav.Link>
             <NavDropdown title="Admin" id="navbarScrollingDropdown">
               {isAdmin && (
                 <NavDropdown.Item onClick={() => navigate("/user-products")}>
-                  Update
+                  Редактировать
                 </NavDropdown.Item>
               )}
               {isAdmin && (
@@ -49,24 +49,24 @@ function NavScrollExample() {
               )}
               {isAdmin && (
                 <NavDropdown.Item onClick={() => navigate("/create-category")}>
-                  Create Category
+                  Создать категорию
                 </NavDropdown.Item>
               )}
             </NavDropdown>
 
-            <NavDropdown title="User" id="navbarScrollingDropdown">
+            <NavDropdown title="Пользователь" id="navbarScrollingDropdown">
               {!currentUser ? (
                 <>
                   <NavDropdown.Item onClick={() => navigate("/login")}>
-                    Login
+                    Войти
                   </NavDropdown.Item>
                   <NavDropdown.Item onClick={() => navigate("/signup")}>
-                    Sign Up
+                    Зарегистрироваться
                   </NavDropdown.Item>
                 </>
               ) : (
                 <NavDropdown.Item onClick={() => handleLogout(navigate)}>
-                  Log Out
+                  Выйти
                 </NavDropdown.Item>
               )}
             </NavDropdown>

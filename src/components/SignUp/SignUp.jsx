@@ -1,19 +1,19 @@
-import React, { useContext, useState } from 'react';
-// import { authContext } from '../../contexts/authContext';
-import { useNavigate } from 'react-router-dom';
-import { authContext } from '../../context/authContext';
+import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { authContext } from "../../context/authContext";
+import "./Register.css";
 
 const Register = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const navigate = useNavigate();
 
   const { loading, error, handleRegister } = useContext(authContext);
 
   const handleSubmit = () => {
     if (!email.trim() || !password.trim() || !confirmPassword.trim()) {
-      alert('Заполните все поля!');
+      alert("Заполните все поля!");
     } else {
       const user = {
         email,
@@ -26,17 +26,32 @@ const Register = () => {
   };
 
   return (
-    <div>
-      <h1>Register</h1>
-      <div>
-        <input type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
-        <input type="password" onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
-        <input
-          type="password"
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          placeholder="Confirm Password"
-        />
-        <button onClick={handleSubmit}>Sign up</button>
+    <div className="main-container">
+      <div className="register-container">
+        <h1>Регистрация</h1>
+        <div className="form-group">
+          <input
+            type="email"
+            className="form-control"
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            className="form-control"
+            placeholder="Пароль"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <input
+            type="password"
+            className="form-control"
+            placeholder="Подтвердите пароль"
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+          <button className="btn btn-primary" onClick={handleSubmit}>
+            Создать аккаунт
+          </button>
+        </div>
       </div>
     </div>
   );

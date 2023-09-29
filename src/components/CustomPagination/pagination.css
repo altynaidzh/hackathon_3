@@ -1,0 +1,12 @@
+/* styles.css */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Подберите подходящий отступ сверху, если необходимо */
+}
+
+.pagination-container .pagination-prev,
+.pagination-container .pagination-next {
+  margin: 0;
+}
