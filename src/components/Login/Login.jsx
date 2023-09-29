@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../../context/authContext";
-// import { authContext } from "../../contexts/authContext";
+import "./Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -18,17 +18,31 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1>Login user</h1>
-      <div>
-        <input type="text" onChange={(e) => setEmail(e.target.value)} />
-        <input type="password" onChange={(e) => setPassword(e.target.value)} />
-        <button onClick={handleSignIn}>sign in</button>
-      </div>
-      <div>
-        <p>
-          New to Online Shop? <Link to="/register">Create account</Link>
-        </p>
+    <div className="main-container">
+      <div className="login-container">
+        <h1>Войти</h1>
+        <div className="form-group">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Почта"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            className="form-control"
+            placeholder="Пароль"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button className="btn btn-primary" onClick={handleSignIn}>
+            Войти
+          </button>
+        </div>
+        <div>
+          <p>
+            Новый пользователь? <Link to="/register">Создать аккаунт</Link>
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import { Pagination } from "react-bootstrap";
 import { useSearchParams } from "react-router-dom";
 import { getPageCount } from "./helper";
 import { productsContext } from "../../context/productContext";
+import "./pagination.css";
 
 const CustomPagination = () => {
   const { pages } = useContext(productsContext);
@@ -21,24 +22,26 @@ const CustomPagination = () => {
   };
 
   return (
-    <Pagination>
-      <Pagination.Prev
-        disabled={currentPage === 1}
-        onClick={() => handleChangePage(currentPage - 1)}
-      />
-      {getPageCount(pages).map((item) => (
-        <Pagination.Item
-          active={currentPage === item}
-          onClick={() => handleChangePage(item)}
-        >
-          {item}
-        </Pagination.Item>
-      ))}
-      <Pagination.Next
-        disabled={currentPage === pages}
-        onClick={() => handleChangePage(currentPage + 1)}
-      />
-    </Pagination>
+    <div className="pagination-container">
+      <Pagination>
+        <Pagination.Prev
+          disabled={currentPage === 1}
+          onClick={() => handleChangePage(currentPage - 1)}
+        />
+        {getPageCount(pages).map((item) => (
+          <Pagination.Item
+            active={currentPage === item}
+            onClick={() => handleChangePage(item)}
+          >
+            {item}
+          </Pagination.Item>
+        ))}
+        <Pagination.Next
+          disabled={currentPage === pages}
+          onClick={() => handleChangePage(currentPage + 1)}
+        />
+      </Pagination>
+    </div>
   );
 };
 

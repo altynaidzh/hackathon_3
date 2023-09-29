@@ -1,22 +1,40 @@
-
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./cardstyles.css";
 
-
 const CustomCard = ({ product, isUserProducts, onDelete }) => {
   const navigate = useNavigate();
 
+  const buttonContainerStyle = {
+    display: "flex",
+    justifyContent: "center",
+    marginTop: "10px",
+    gap: "10px",
+  };
+
   return (
     <Card className="custom-card">
-      <Card.Img variant="top" src={product.image} />
+      <div style={{ position: "relative", width: "100%", paddingTop: "100%" }}>
+        <Card.Img
+          src={product.image}
+          alt={product.title}
+          style={{
+            objectFit: "cover",
+            position: "absolute",
+            top: "0",
+            left: "0",
+            width: "100%",
+            height: "100%",
+          }}
+        />
+      </div>
       <div className="info">
         <div>
           <h3>{product.title}</h3>
           <p>{product.description}</p>
-          <p>Цена:{product.price}</p>
-          <div style={{ display: "flex", gap: "5px" }}>
+          <p>Цена: {product.price}</p>
+          <div style={buttonContainerStyle}>
             <Button
               onClick={() => navigate(`/product-detail/${product.id}`)}
               variant="light"
@@ -25,11 +43,11 @@ const CustomCard = ({ product, isUserProducts, onDelete }) => {
             </Button>
             {isUserProducts && (
               <>
-                <Button variant="danger" onClick={() => onDelete(product.id)}>
+                <Button variant="light" onClick={() => onDelete(product.id)}>
                   Delete
                 </Button>
                 <Button
-                  variant="info"
+                  variant="light"
                   onClick={() => navigate(`/edit-product/${product.id}`)}
                 >
                   Edit

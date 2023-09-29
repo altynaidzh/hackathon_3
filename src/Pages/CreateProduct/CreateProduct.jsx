@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { productsContext } from "../../context/productContext";
 
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 const CreateProduct = () => {
   const { getCategories, categories, createProduct } =

@@ -17,7 +17,6 @@
       "id": 2
     },
     {
-
       "title": "куала-лумпур",
       "price": " от 1000 $",
       "description": "Остров Бали, Индонезия - одно из красивейших и живописных мест нашей планеты.",
@@ -40,21 +39,6 @@
       "category": "Внутренние туры",
       "image": "https://sputnik.kg/img/104502/71/1045027144_0:114:1400:905_1920x0_80_0_0_279ec2eb0a63f979fc3caefb24de73d3.jpg",
       "id": 4
-    },
-    {
-      "title": "Джети-Огуз, (Жырылган Журок)",
-      "price": " от 100",
-      "description": "Скала Жарылган жүрөк, как называют в Киргизии, давно стала местом паломничества влюбленных пар.",
-      "category": "Внутренние туры",
-      "image": "https://www.karakol.name/images/site/dzhety-oguz-leg_01.jpg",
-      "id": 4
-
-      "title": "Баку в Итальянском ",
-      "price": "Маршрут: Стамбул - Чанаккале - Троя ",
-      "description": "Дней: 8 / Ночей: 7",
-      "category": "1",
-      "image": "https://www.smartertravel.com/wp-content/uploads/2017/06/shutterstock_544217959.jpg",
-      "id": 2
     }
   ],
   "categories": [
