@@ -13,6 +13,7 @@ import UserTours from "./Pages/UserTours/UserTours";
 import EditTours from "./Pages/EditTours/EditTours";
 import DetailPage from "./Pages/DetailPage/DetailPage";
 import HomePage from "./Pages/HomePage/HomePage";
+import Cart from "./components/Cart/Cart";
 
 
 const PrivateRoutes = () => {
@@ -43,6 +44,7 @@ const Routing = () => {
         <Route path="/user-products" element={<UserTours />} />
         <Route path="/edit-product/:id" element={<EditTours />} />
         <Route path="/home" element={<HomePage />} />
+        <Route path="/cart" element={<Cart/>}/>
 
       </Route>
     </Routes>

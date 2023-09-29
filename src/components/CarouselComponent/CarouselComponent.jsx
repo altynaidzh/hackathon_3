@@ -6,19 +6,14 @@ const carouselContainerStyle = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  height: "100vh",
+  height: "80vh",
+  marginTop: "80px",
+  marginBottom: "60px",
 };
 
 const carouselStyle = {
-  marginTop: "40px",
-  maxWidth: "1300px",
-  width: "100%",
-  margin: "0 auto", // Центрируем карусель на странице
-};
-
-const imageStyle = {
-  width: "100%", // Сделайте изображения адаптивными по ширине
-  height: "auto", // Автоматическое масштабирование высоты
+  marginTop: "70px",
+  width: "1100px",
 };
 
 const CarouselComponent = () => {
@@ -28,21 +23,19 @@ const CarouselComponent = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://s9.travelask.ru/uploads/post/000/027/649/main_image/full-56024e81c255ba1de46e46127c355825.jpg"
-            alt="Первый слайд"
-            style={imageStyle}
+            src="http://static.wixstatic.com/media/4d7d86_fd4cf52018ca48f389129de5e7a0cbcc~mv2.jpg"
+            alt="First slide"
           />
           <Carousel.Caption>
-            <h5>Растения для балкона и сада</h5>
-            <p>Придайте своему балкону и саду свежий вид!</p>
+            <h5>Туры В Европу Магазин</h5>
+            <p></p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://top10.travel/wp-content/uploads/2016/10/santa-mariya-della-salyute.jpg"
-            alt="Второй слайд"
-            style={imageStyle}
+            src="http://static.wixstatic.com/media/4d7d86_fd4cf52018ca48f389129de5e7a0cbcc~mv2.jpg"
+            alt="Second slide"
           />
           <Carousel.Caption>
             <h5>Почувствуй летний вайб</h5>
@@ -52,13 +45,34 @@ const CarouselComponent = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://lifeglobe.net/x/entry/0/different5-67.jpg"
-            alt="Третий слайд"
-            style={imageStyle}
+            src="http://soscroisiere.com/back/images/navires/slider/1costa_diadema20190314151209.jpg"
+            alt="Third slide"
           />
           <Carousel.Caption>
             <h5>Закажите солнце в дом</h5>
             <p>Солнечный свет в сердце и в вазе</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="http://soscroisiere.com/back/images/navires/slider/1costa_diadema20190314151209.jpg"
+            alt="Third slide"
+          />
+          <Carousel.Caption>
+            <h5>Закажите солнце в дом</h5>
+            <p>Солнечный свет в сердце и в вазе</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="http://static.wixstatic.com/media/4d7d86_fd4cf52018ca48f389129de5e7a0cbcc~mv2.jpg"
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h5>Туры В Европу Магазин</h5>
+            <p></p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

@@ -35,7 +35,8 @@ function NavScrollExample() {
                 Туры
               </NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Админ" id="navbarScrollingDropdown">
+            <Nav.Link onClick={() => navigate("/cart")}>Cart</Nav.Link>
+            <NavDropdown title="Admin" id="navbarScrollingDropdown">
               {isAdmin && (
                 <NavDropdown.Item onClick={() => navigate("/user-products")}>
                   Редактировать
