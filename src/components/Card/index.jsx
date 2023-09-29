@@ -2,9 +2,11 @@ import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./cardstyles.css";
+import { useCart } from "../../context/cartContext";
 
 const CustomCard = ({ product, isUserProducts, onDelete }) => {
   const navigate = useNavigate();
+  const { addProductToCart, checkProductInCart } = useCart();
 
   const buttonContainerStyle = {
     display: "flex",
@@ -40,6 +42,14 @@ const CustomCard = ({ product, isUserProducts, onDelete }) => {
               variant="light"
             >
               Details
+            </Button>
+            <Button
+              onClick={() => addProductToCart(product)}
+              variant="light"
+            >
+              {`${
+            checkProductInCart(product.id) ? "Delete from cart" : "Add to cart"
+          }`}
             </Button>
             {isUserProducts && (
               <>

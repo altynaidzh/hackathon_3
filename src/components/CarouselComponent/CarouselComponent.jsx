@@ -6,12 +6,12 @@ const carouselContainerStyle = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  height: "100vh",
+  height: "80vh",
 };
 
 const carouselStyle = {
-  marginTop: "40px",
-  width: "1300px",
+  marginTop: "70px",
+  width: "1100px",
 };
 
 const CarouselComponent = () => {
@@ -21,18 +21,18 @@ const CarouselComponent = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://res.cloudinary.com/blume2000/image/upload/c_fill,dpr_1,f_webp,fl_progressive:steep,q_auto:eco,g_auto,w_1360,h_638/v1688645597/cms/Balkon.webp"
+            src="http://static.wixstatic.com/media/4d7d86_fd4cf52018ca48f389129de5e7a0cbcc~mv2.jpg"
             alt="First slide"
           />
           <Carousel.Caption>
-            <h5>Растения для балкона и сада</h5>
-            <p>Придайте своему балкону и саду свежий вид!</p>
+            <h5>Туры В Европу Магазин</h5>
+            <p></p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://res.cloudinary.com/blume2000/image/upload/c_fill,dpr_1,f_webp,fl_progressive:steep,q_auto:eco,g_auto,w_1360,h_638/v1686587063/cms/Sommer_23_2.webp"
+            src="http://static.wixstatic.com/media/4d7d86_fd4cf52018ca48f389129de5e7a0cbcc~mv2.jpg"
             alt="Second slide"
           />
           <Carousel.Caption>
@@ -43,12 +43,34 @@ const CarouselComponent = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://res.cloudinary.com/blume2000/image/upload/c_fill,dpr_1,f_webp,fl_progressive:steep,q_auto:eco,g_auto,w_1360,h_638/v1687768071/cms/Sonnenblumen_3.webp"
+            src="http://soscroisiere.com/back/images/navires/slider/1costa_diadema20190314151209.jpg"
             alt="Third slide"
           />
           <Carousel.Caption>
             <h5>Закажите солнце в дом</h5>
             <p>Солнечный свет в сердце и в вазе</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="http://soscroisiere.com/back/images/navires/slider/1costa_diadema20190314151209.jpg"
+            alt="Third slide"
+          />
+          <Carousel.Caption>
+            <h5>Закажите солнце в дом</h5>
+            <p>Солнечный свет в сердце и в вазе</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="http://static.wixstatic.com/media/4d7d86_fd4cf52018ca48f389129de5e7a0cbcc~mv2.jpg"
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h5>Туры В Европу Магазин</h5>
+            <p></p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

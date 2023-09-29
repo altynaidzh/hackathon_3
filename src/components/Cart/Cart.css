@@ -1,0 +1,50 @@
+.cartt {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.texts {
+    color: blue !important;
+    margin: 0 2%;
+}
+.cartUl{
+    display: flex;
+    list-style: none;
+}
+.counttexts {
+    border-color: #999999 !important;
+    background-color: #999999 !important;
+    border-radius: 9px;
+  }
+  .delete {
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    border: red;
+    height: 35px;
+    cursor: pointer;
+    width: 80px;
+    font-weight: 700;
+  }
+  .H {
+    margin-left: 20px;
+  }
+  #accept {
+    margin-left: 20px;
+    height: 31px;
+  }
+  #back {
+    height: 31px;
+    margin-left: 20px;
+  }
+  @media all and (max-width: 768px) {
+    .cartt {
+      background: none;
+      background-color: black !important;
+    }
+  }
+  @media all and (max-width: 768px) {
+    .delete {
+      width: 50px;
+    }
+  }
