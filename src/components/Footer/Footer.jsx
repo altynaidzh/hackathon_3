@@ -19,12 +19,7 @@ const Footer = () => {
           </section>
         </div>
 
-        <div className="text-center p-3">
-          © 2023 Copyright:
-          <a className="text-white" href="https://mdbootstrap.com/">
-            MDBootstrap.com
-          </a>
-        </div>
+        <div className="text-center p-3">© 2023 Copyright:</div>
       </footer>
     </section>
   );
